@@ -1,6 +1,6 @@
 package tn.esprit.spring.entities;
 
-public class Personne {
+public abstract class Personne {
  String nom; 
  String prennom;
  
@@ -25,6 +25,6 @@ public String getPrennom() {
 public void setPrennom(String prennom) {
 	this.prennom = prennom;
 }
- 
- 
+public abstract void afficheSalaire();
+
 }
