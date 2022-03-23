@@ -36,10 +36,14 @@ public class Vendeur extends Personne{
 
     /**
      * Caculer le salaire du vendeur
-     * @param taux_vente attribute taux de vente
      * @return
      */
-    public float calculateSalary(float taux_vente){
+    public float calculateSalary(){
         return (450*taux_vente)/100;
+    }
+
+    @Override
+    public void afficheSalaire() {
+        System.out.println("Vendeur :"+calculateSalary());
     }
 }
