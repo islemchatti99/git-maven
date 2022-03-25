@@ -3,100 +3,109 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GestionEmploye;
+
+package tn.esprit.spring.entities;
+
 
 /**
  *
  * @author zohratebib
  */
-public abstract class Employe {
-    protected int id;
-    protected String nom,adresse;
-    protected int nbHeure;
-    
-    public Employe(int id,String n)
-    {
-    this.id=id;
-    nom=n;
-        System.out.println("2 para Emp");
-    }
 
-    public Employe(int id, String nom, String adresse, int nbHeure) {
-        this.id = id;
-        this.nom = nom;
-        this.adresse = adresse;
-        this.nbHeure = nbHeure;
-    }
-    
-    
-    public Employe(int id ,String n,String ad)
-    {
-    this(id,n);
-    this.adresse=ad;
-        System.out.println("Emp 3 par");
-    }
-    public Employe()
-    {
-        System.out.println("Employe par defaut");
-    }
+public abstract class Employee {
+	protected int id;
+	protected String nom, adresse;
+	protected int nbHeure;
+	protected int cin;
 
-    public int getId() {
-        return id;
-    }
+	public Employee(int id, String n) {
+		this.id = id;
+		nom = n;
+		System.out.println("2 para Emp");
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public Employee(int id, String nom, String adresse, int nbHeure) {
+		this.id = id;
+		this.nom = nom;
+		this.adresse = adresse;
+		this.nbHeure = nbHeure;
+	}
 
-    public String getNom() {
-        return nom;
-    }
+	public Employee(int id, String n, String ad) {
+		this(id, n);
+		this.adresse = ad;
+		System.out.println("Emp 3 par");
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public Employee() {
+		System.out.println("Employe par defaut");
+	}
 
-    public String getAdresse() {
-        return adresse;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public int getNbHeure() {
-        return nbHeure;
-    }
+	public String getNom() {
+		return nom;
+	}
 
-    public void setNbHeure(int nbHeure) {
-        this.nbHeure = nbHeure;
-    }
-    @Override
-    public String toString()
-    {
-    return "id "+id+"nom :"+nom+
-            "adresse :"+adresse+"nombre heure :"+nbHeure;
-    }
-    
-    private float calculSalaire(){return 0;}
-    
-   public abstract void afficheSalaire();
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        
-        if(obj instanceof Employe){
-        Employe e=(Employe)obj;
-        
-        if(e.id==this.id && e.nom.equals(nom) )
-            return true;
-        }
-        return false;
-    }
-    
-   
-    public static void main(String[] args) {
-        System.out.println("test");
-    }
-  
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public int getNbHeure() {
+		return nbHeure;
+	}
+
+	public void setNbHeure(int nbHeure) {
+		this.nbHeure = nbHeure;
+	}
+
+	public int getCin() {
+		return cin;
+	}
+
+	public void setCin(int cin) {
+		this.cin = cin;
+	}
+
+	@Override
+	public String toString() {
+		return "id " + id + "nom :" + nom + "adresse :" + adresse + "nombre heure :" + nbHeure;
+	}
+
+	private float calculSalaire() {
+		return 0;
+	}
+
+	public abstract void afficheSalaire();
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (obj instanceof Employee) {
+			Employee e = (Employee) obj;
+
+			if (e.id == this.id && e.nom.equals(nom))
+				return true;
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("test");
+	}
+
 }
