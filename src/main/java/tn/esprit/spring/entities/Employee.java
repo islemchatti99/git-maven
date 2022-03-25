@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package tn.esprit.spring.entities;
+
 
 /**
  *
  * @author zohratebib
  */
+
 public abstract class Employee {
 	protected int id;
 	protected String nom, adresse;

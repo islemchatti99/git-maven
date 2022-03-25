@@ -5,7 +5,7 @@ package tn.esprit.spring.entities;
  *
  * Class vendeur
  */
-public class Vendeur extends Personne{
+public class Vendeur extends Employee {
     private float taux_vente;
     int somme;
     /**
