@@ -7,6 +7,7 @@ package tn.esprit.spring.entities;
  */
 public class Vendeur extends Personne{
     private float taux_vente;
+    int somme;
     /**
      * constructeur
      * @param nom attribute nom du vendeur
